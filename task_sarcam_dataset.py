@@ -15,7 +15,7 @@ padding_type='post'
 oov_token = '<OOV>'
 num_epochs = 10
 
-datastore = [json.loads(line) for line in open('.\data\Sarcasm_Headlines_Dataset.json', 'r')]
+datastore = [json.loads(line) for line in open('.\data\sarcasm_dataset.json', 'r')]
 
 sentences = []
 labels = []

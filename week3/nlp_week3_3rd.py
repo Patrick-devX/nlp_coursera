@@ -52,9 +52,9 @@ testing_sequences = tokenizer.texts_to_sequences(testing_sentences)
 testing_padded = tf.keras.preprocessing.sequence.pad_sequences(testing_sequences, maxlen=max_length)
 
 def plot_graphs(history, string):
-    pl.plot(history.history[string])
-    pl.plot(history.history['val_' + string])
-    pl.xlabel('Epochs')
+    plt.plot(history.history[string])
+    plt.plot(history.history['val_' + string])
+    plt.xlabel('Epochs')
     plt.ylabel(string)
     plt.legend([string, 'val_' + string])
     plt.show()
