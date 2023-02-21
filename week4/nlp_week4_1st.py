@@ -52,7 +52,7 @@ def build_model():
     model = tf.keras.Sequential([
         tf.keras.layers.Embedding(input_dim=total_words, output_dim=embedding_dim, input_length=max_sequence_len-1),
         tf.keras.layers.LSTM(lstm_dim),
-        tf.keras.layers.Dense(total_words, activation='relu'),
+        tf.keras.layers.Dense(total_words, activation='softmax'),
     ])
     #Set the training parameter
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
